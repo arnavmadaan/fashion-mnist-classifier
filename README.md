@@ -14,11 +14,11 @@ This projects provides an end to end implementation of an image classifier for t
 
 The Fashion-MNIST dataset is used for this project. It consists of:
 
-    60,000 28x28 grayscale training images.
+60,000 28x28 grayscale training images.
 
-    10,000 28x28 grayscale testing images.
+10,000 28x28 grayscale testing images.
 
-    10 Classes: T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot.
+10 Classes: T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot.
 
 The dataset is loaded directly using the `keras.datasets.fashion_mnist.load_data()` function.
 
@@ -32,8 +32,11 @@ It involves the following layers
 2. Convolutional Block 2: 64 Filters (2x2 Pool size)
 3. Classifier layer
      `Flatten` converts 2D feature maps to a 1D vector
+   
      `nn.Linear` has 128 neurons, with ReLU activation
+   
      `nn.Dropout` has a 50% rate to prevent overfitting
+   
      `nn.Linear` (Output) has 10 neurons, one for each class
 
 The model is trained using ADAM optimizer, and CrossEntropyLoss function.
