@@ -30,7 +30,8 @@ It involves the following layers
 
 1. Convolutional Block 1: 32 Filters (2x2 Pool size)
 2. Convolutional Block 2: 64 Filters (2x2 Pool size)
-3. Classifier layer
+3. Classifier layer:
+   
      `Flatten` converts 2D feature maps to a 1D vector
    
      `nn.Linear` has 128 neurons, with ReLU activation
